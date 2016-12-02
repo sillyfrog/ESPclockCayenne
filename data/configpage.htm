@@ -1,0 +1,50 @@
+<html>
+<head>
+ <meta name="viewport" content="initial-scale=1">
+ <link rel="stylesheet" href="/stylesheet.css" type="text/css">
+</head>
+<div class=title>ESP8266 Time, Temp etc</div>
+<div class=name>Device Name: @@DEVNAME@@</div>
+<form method="post" action="/form">
+<table>
+<tr><th colspan=2>Status</th></tr>
+<tr><td>Current time:</td><td><b>@@HOUR@@:@@MIN@@:@@SEC@@</b></td></tr>
+<tr><td>Sync Status:</td><td>@@SYNCSTATUS@@</td></tr>
+<tr><td>Device Name:</td><td><input type=text name="devname" value="@@DEVNAME@@"></td></tr>
+
+<tr><th colspan=2>WiFi Setup</th></tr>
+<tr><td>SSID:</td><td><input type=text name="ssid" value="@@SSID@@"></td></tr>
+<tr><td>PSK:</td><td><input type=password name="psk" value="@@PSK@@"></td></tr>
+
+<tr><th colspan=2>Time Setup</th></tr>
+<tr><td>NTP Server:</td><td><input type=text name="timeserver"
+    value="@@TIMESERVER@@"></td></tr>
+<tr><td>Sync Interval:</td><td><input type=text name="syncinterval" size=5
+    value="@@SYNCINTERVAL@@">s</td></tr>
+<tr><td>Timezone:</td><td><input type=text name="timezone" size=5
+    value="@@TIMEZONE@@">min</td></tr>
+
+<tr><th colspan=2>Brightness</th></tr>
+<tr><td>Current Lux:</td><td><b>@@LUX@@</b></td></tr>
+<tr><td>Default:</td><td><input type=text name="brightness" size=5
+    value="@@BRIGHTNESS@@">(0-3)</td></tr>
+<tr><td>Level 0 Lux:</td><td><input type=text name="lvl0lux" size=5
+    value="@@LVL0LUX@@">(0-10000)</td></tr>
+<tr><td>Level 1 Lux:</td><td><input type=text name="lvl1lux" size=5
+    value="@@LVL1LUX@@">(0-10000)</td></tr>
+<tr><td>Level 2 Lux:</td><td><input type=text name="lvl2lux" size=5
+    value="@@LVL2LUX@@">(0-10000)</td></tr>
+<tr><td>Lux Margin:</td><td><input type=text name="luxmargin" size=5
+    value="@@LUXMARGIN@@">(0-20)</td></tr>
+
+
+<tr><th colspan=2>Octoblu</th></tr>
+<tr><td>UUID:</td><td><input type=text name="uuid" value="@@UUID@@"></td></tr>
+<tr><td>Token:</td><td><input type=text name="token" value="@@TOKEN@@"></td></tr>
+
+</table>
+<p/>
+<input type="submit" value="Update">
+</form>
+<div class="update">@@UPDATERESPONSE@@</div>
+</html>
